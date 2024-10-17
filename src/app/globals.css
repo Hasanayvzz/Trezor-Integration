@@ -40,3 +40,194 @@ a {
     color-scheme: dark;
   }
 }
+
+/* CSS */
+.connect-btn {
+  align-items: center;
+  appearance: none;
+  background-clip: padding-box;
+  background-color: initial;
+  background-image: none;
+  border-style: none;
+  box-sizing: border-box;
+  color: #fff;
+  cursor: pointer;
+  display: inline-block;
+  flex-direction: row;
+  flex-shrink: 0;
+  font-family: Eina01, sans-serif;
+  font-size: 16px;
+  font-weight: 800;
+  justify-content: center;
+  line-height: 24px;
+  margin: 0;
+  min-height: 64px;
+  outline: none;
+  overflow: visible;
+  padding: 19px 26px;
+  pointer-events: auto;
+  position: relative;
+  text-align: center;
+  text-decoration: none;
+  text-transform: none;
+  user-select: none;
+  -webkit-user-select: none;
+  touch-action: manipulation;
+  vertical-align: middle;
+  width: auto;
+  word-break: keep-all;
+  z-index: 0;
+}
+
+@media (min-width: 768px) {
+  .connect-btn {
+    padding: 19px 32px;
+  }
+}
+
+.connect-btn:before,
+.connect-btn:after {
+  border-radius: 80px;
+}
+
+.connect-btn:before {
+  background-color: rgba(249, 58, 19, 0.32);
+  content: "";
+  display: block;
+  height: 100%;
+  left: 0;
+  overflow: hidden;
+  position: absolute;
+  top: 0;
+  width: 100%;
+  z-index: -2;
+}
+
+.connect-btn:after {
+  background-color: initial;
+  background-image: linear-gradient(92.83deg, #ff7426 0, #f93a13 100%);
+  bottom: 4px;
+  content: "";
+  display: block;
+  left: 4px;
+  overflow: hidden;
+  position: absolute;
+  right: 4px;
+  top: 4px;
+  transition: all 100ms ease-out;
+  z-index: -1;
+}
+
+.connect-btn:hover:not(:disabled):after {
+  bottom: 0;
+  left: 0;
+  right: 0;
+  top: 0;
+  transition-timing-function: ease-in;
+}
+
+.connect-btn:active:not(:disabled) {
+  color: #ccc;
+}
+
+.connect-btn:active:not(:disabled):after {
+  background-image: linear-gradient(
+      0deg,
+      rgba(0, 0, 0, 0.2),
+      rgba(0, 0, 0, 0.2)
+    ),
+    linear-gradient(92.83deg, #ff7426 0, #f93a13 100%);
+  bottom: 4px;
+  left: 4px;
+  right: 4px;
+  top: 4px;
+}
+
+.connect-btn:disabled {
+  cursor: default;
+  opacity: 0.24;
+}
+.toast-success-container-after {
+  overflow: hidden;
+  position: relative;
+  border-radius: 8px !important;
+  border: 1px solid #3df164 !important;
+  box-shadow: 0px 1px 5px rgba(178, 248, 175, 0.1) !important;
+}
+
+.toast-success-container-after::after {
+  top: 0;
+  left: 0;
+  content: "";
+  width: 5px;
+  height: 93%;
+  position: absolute;
+  display: inline-block;
+  background-color: #3df164;
+}
+
+.toast-success-container-after .progress-bar-style {
+  color: #3df164;
+  background-color: #3df164;
+}
+
+.toast-error-container-after {
+  overflow: hidden;
+  position: relative;
+  border-radius: 8px !important;
+  border: 1px solid #aa1c40 !important;
+}
+
+.toast-error-container-after::after {
+  top: 0;
+  left: 0;
+  content: "";
+  width: 5px;
+  height: 93%;
+  position: absolute;
+  display: inline-block;
+  background-color: #aa1c40;
+}
+
+.toast-error-container-after .progress-bar-style {
+  color: #aa1c40;
+  background-color: #aa1c40;
+}
+
+.transaction-btn {
+  background-color: #fbeee0;
+  border: 2px solid #422800;
+  border-radius: 30px;
+  box-shadow: #422800 4px 4px 0 0;
+  color: #422800;
+  cursor: pointer;
+  display: inline-block;
+  font-weight: 600;
+  font-size: 18px;
+  padding: 0 18px;
+  line-height: 50px;
+  text-align: center;
+  text-decoration: none;
+  user-select: none;
+  -webkit-user-select: none;
+  touch-action: manipulation;
+}
+
+.transaction-btn:hover {
+  background-color: #fff;
+}
+
+.transaction-btn:active {
+  box-shadow: #422800 2px 2px 0 0;
+  transform: translate(2px, 2px);
+}
+.transaction-btn:disabled {
+  background-color: gray;
+}
+
+@media (min-width: 768px) {
+  .transaction-btn {
+    min-width: 120px;
+    padding: 0 25px;
+  }
+}
